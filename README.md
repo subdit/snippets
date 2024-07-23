@@ -1,2 +1,2 @@
 # The Snippets Application
-### The technology: Next.js Prisma, Next.js for front-end, and Sqlite for database
+### The technology: Next.js for the front end and Prisma Sqlite for the database.
