@@ -17,7 +17,6 @@ export default function SnippetCreatePage() {
         code
       }
     });
-    console.log(snippet);
 
     // Redirect to Home page to "Home Page"to list out all the record
     redirect('/');

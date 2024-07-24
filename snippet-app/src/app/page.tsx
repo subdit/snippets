@@ -20,8 +20,8 @@ export default async function Home() {
   });
   return (
     <div>
-      <h1 className='text-black-400 text-xl flex justify-center bold'>
-        Home Page Snippet Code
+      <h1 className=' text-2xl  font-bold flex justify-center m-4'>
+        Home Page Snippet
       </h1>
       <div className='flex m-2 justify-between items-center'>
         <h2 className='text-xl font-bold'>Snippet</h2>
