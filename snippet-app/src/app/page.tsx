@@ -12,7 +12,7 @@ export default async function Home() {
       <Link
         key={snippet.id}
         href={`/snippets/${snippet.id}`}
-        className='flex justify-between items-center p-2 border rounded m-2'>
+        className='flex justify-between items-center p-2 border rounded'>
         <div key={snippet.id}>{snippet.title}</div>
         <div>View</div>
       </Link>
@@ -25,7 +25,7 @@ export default async function Home() {
       </h1>
       <div className='flex m-2 justify-between items-center'>
         <h2 className='text-xl font-bold'>Snippet</h2>
-        <Link href='/snippets/new' className='border p-2 border-rounded'>
+        <Link href='/snippets/new' className='border p-2 rounded'>
           New
         </Link>
       </div>
