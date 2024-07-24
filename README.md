@@ -2,9 +2,9 @@
 
 ## The technology:
 
-: Next.js for the front end
-: Prisma Sqlite connect with local database
-: Tailwind CSS for Style
+1. Next.js for the front end
+2. Prisma Sqlite connect with local database
+3. Tailwind CSS for Style
 
 ### Create Records
 
