@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { db } from '@/app/db';
+import Link from 'next/link';
 
 // Mark async function to await for data from server component
 // Make an HTTP for outside third party but we use directly access to a database to get data.
@@ -8,16 +9,28 @@ export default async function Home() {
   const snippets = await db.snippet.findMany();
   const renderSnippets = snippets.map(snippet => {
     return (
-      <div key={snippet.id}>
-        {snippet.title}
-        <p>{snippet.code}</p>
-      </div>
+      <Link
+        key={snippet.id}
+        href={`/snippets/${snippet.id}`}
+        className='flex justify-between items-center p-2 border rounded m-2'>
+        <div key={snippet.id}>{snippet.title}</div>
+        <div>View</div>
+      </Link>
     );
   });
   return (
     <div>
-      <h2>Home Page Snippet Code</h2>
-      <div>{renderSnippets}</div>
+      <h1 className='text-black-400 text-xl flex justify-center bold'>
+        Home Page Snippet Code
+      </h1>
+      <div className='flex m-2 justify-between items-center'>
+        <h2 className='text-xl font-bold'>Snippet</h2>
+        <Link href='/snippets/new' className='border p-2 border-rounded'>
+          New
+        </Link>
+      </div>
+
+      <div className='flex flex-col gap-2'>{renderSnippets}</div>
     </div>
   );
 }
