@@ -11,19 +11,20 @@ export default function SnippetCreatePage() {
     const code = formData.get('code') as string;
 
     // Create new record in the database
-    await db.snippet.create({
+    const snippet = await db.snippet.create({
       data: {
         title,
         code
       }
     });
+    console.log(snippet);
 
     // Redirect to Home page to "Home Page"to list out all the record
     redirect('/');
   }
 
   return (
-    <form>
+    <form action={createSnippet}>
       <h3 className='font-bold m-3'>Create Snippet</h3>
       <div className='flex flex-col gap-4'>
         <div className='flex gap-4'>
