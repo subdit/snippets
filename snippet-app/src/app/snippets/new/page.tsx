@@ -7,7 +7,7 @@ export default function SnippetCreatePage() {
     'use server';
 
     // Check the user's imputs and make sure they're valid
-    const title = formData.get('title') as string;
+    const title: string = formData.get('title') as string;
     const code = formData.get('code') as string;
 
     // Create new record in the database
@@ -25,7 +25,7 @@ export default function SnippetCreatePage() {
 
   return (
     <form action={createSnippet}>
-      <h3 className='font-bold m-3'>Create Snippet</h3>
+      <h2 className='font-bold m-3 text-center'>Create Snippet</h2>
       <div className='flex flex-col gap-4'>
         <div className='flex gap-4'>
           <label className='w-12' htmlFor='title'>
