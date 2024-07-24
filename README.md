@@ -1,6 +1,10 @@
 # The Snippets Application
 
-## The technology: Next.js for the front end and Prisma Sqlite for the database
+## The technology:
+
+: Next.js for the front end
+: Prisma Sqlite connect with local database
+: Tailwind CSS for Style
 
 ### Create Records
 
